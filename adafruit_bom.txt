@@ -1,0 +1,18 @@
+Adafruit HUZZAH ESP8266 Breakout
+http://www.adafruit.com/products/2471
+
+Large 6V 3.4W Solar panel - 3.4 Watt
+http://www.adafruit.com/product/500
+
+Lithium Ion Battery - 3.7v 2000mAh
+http://www.adafruit.com/product/2011
+
+10K Precision Epoxy Thermistor - 3950 NTC
+http://www.adafruit.com/products/372
+
+Charger Options:
+USB LiIon/LiPoly charger - v1.2
+http://www.adafruit.com/products/259
+
+USB / DC / Solar Lithium Ion/Polymer charger - v2
+http://www.adafruit.com/products/390
