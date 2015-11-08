@@ -3501,7 +3501,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
