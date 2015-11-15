@@ -7529,6 +7529,79 @@ LILYPAD- DIO-09910&lt;br&gt;</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Passives">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find resistors, capacitors, inductors, test points, jumper pads, etc.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK">
+<description>Solder jumper, small, shorted with trace. No paste layer. Trace is cuttable.</description>
+<wire x1="0.8255" y1="-1.016" x2="-0.8255" y2="-1.016" width="0.2032" layer="21"/>
+<wire x1="0.8255" y1="1.016" x2="1.0795" y2="0.762" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1.0795" y1="0.762" x2="-0.8255" y2="1.016" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1.0795" y1="-0.762" x2="-0.8255" y2="-1.016" width="0.2032" layer="21" curve="90"/>
+<wire x1="0.8255" y1="-1.016" x2="1.0795" y2="-0.762" width="0.2032" layer="21" curve="90"/>
+<wire x1="-0.8255" y1="1.016" x2="0.8255" y2="1.016" width="0.2032" layer="21"/>
+<wire x1="-0.381" y1="0" x2="0.381" y2="0" width="0.2032" layer="1"/>
+<smd name="1" x="-0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+<package name="PAD-JUMPER-2-NC_BY_TRACE_NO_SILK">
+<wire x1="-0.381" y1="0" x2="0.381" y2="0" width="0.2032" layer="1"/>
+<smd name="1" x="-0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="0" y="0.889" size="0.4064" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.889" size="0.4064" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PAD-JUMPER-2-NC_BY_TRACE">
+<wire x1="0.381" y1="0.635" x2="1.016" y2="0" width="1.27" layer="94" curve="-90" cap="flat"/>
+<wire x1="1.016" y1="0" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-90" cap="flat"/>
+<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<wire x1="-0.762" y1="0" x2="1.016" y2="0" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="JUMPER-PAD-2-NC_BY_TRACE" prefix="SJ">
+<gates>
+<gate name="G$1" symbol="PAD-JUMPER-2-NC_BY_TRACE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NO_SILK" package="PAD-JUMPER-2-NC_BY_TRACE_NO_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7546,7 +7619,7 @@ LILYPAD- DIO-09910&lt;br&gt;</description>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="U$1" library="SparkFun-AnalogIC" deviceset="MUX-74HC4067" device="SMD"/>
+<part name="U1" library="SparkFun-AnalogIC" deviceset="MUX-74HC4067" device="SMD"/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
@@ -7574,12 +7647,15 @@ LILYPAD- DIO-09910&lt;br&gt;</description>
 <part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="2.7k"/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
+<part name="DS" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="81.28" y="-27.94" size="2.286" layer="94" font="vector" ratio="12">Jason Holden
 jason.k.holden@gmail.com</text>
+<text x="-33.02" y="35.56" size="1.778" layer="94" rot="R90">Enable Deep Sleep</text>
+<text x="152.4" y="-27.94" size="2.286" layer="94" font="vector" ratio="12">0.2</text>
 </plain>
 <instances>
 <instance part="JPB" gate="G$1" x="5.08" y="10.16" rot="R180"/>
@@ -7589,7 +7665,7 @@ jason.k.holden@gmail.com</text>
 <instance part="GND2" gate="1" x="-15.24" y="-2.54"/>
 <instance part="GND3" gate="1" x="-15.24" y="17.78"/>
 <instance part="SUPPLY1" gate="G$1" x="60.96" y="25.4"/>
-<instance part="U$1" gate="G$1" x="40.64" y="78.74"/>
+<instance part="U1" gate="G$1" x="40.64" y="78.74"/>
 <instance part="SUPPLY2" gate="G$1" x="60.96" y="101.6"/>
 <instance part="GND4" gate="1" x="60.96" y="48.26"/>
 <instance part="SUPPLY3" gate="G$1" x="66.04" y="101.6"/>
@@ -7610,14 +7686,15 @@ jason.k.holden@gmail.com</text>
 <instance part="R1" gate="G$1" x="66.04" y="60.96" rot="R90"/>
 <instance part="R3" gate="G$1" x="73.66" y="60.96" rot="R90"/>
 <instance part="R2" gate="G$1" x="99.06" y="76.2" rot="R90"/>
-<instance part="D1" gate="G$1" x="-53.34" y="17.78"/>
-<instance part="D2" gate="G$1" x="-40.64" y="17.78"/>
-<instance part="GND11" gate="1" x="-48.26" y="5.08"/>
-<instance part="R4" gate="G$1" x="-53.34" y="30.48" rot="R90"/>
-<instance part="R6" gate="G$1" x="-40.64" y="30.48" rot="R90"/>
+<instance part="D1" gate="G$1" x="-53.34" y="10.16"/>
+<instance part="D2" gate="G$1" x="-40.64" y="10.16"/>
+<instance part="GND11" gate="1" x="-48.26" y="-2.54"/>
+<instance part="R4" gate="G$1" x="-53.34" y="22.86" rot="R90"/>
+<instance part="R6" gate="G$1" x="-40.64" y="22.86" rot="R90"/>
 <instance part="FRAME1" gate="G$1" x="-86.36" y="-35.56"/>
 <instance part="FRAME1" gate="V" x="60.96" y="-35.56"/>
 <instance part="LOGO1" gate="G$1" x="137.16" y="12.7"/>
+<instance part="DS" gate="G$1" x="-27.94" y="43.18" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -7625,8 +7702,11 @@ jason.k.holden@gmail.com</text>
 <net name="RST" class="0">
 <segment>
 <pinref part="JPL" gate="G$1" pin="1"/>
-<wire x1="0" y1="45.72" x2="-10.16" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="0" y1="45.72" x2="-15.24" y2="45.72" width="0.1524" layer="91"/>
 <label x="-10.16" y="45.72" size="1.778" layer="95"/>
+<wire x1="-15.24" y1="45.72" x2="-15.24" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="DS" gate="G$1" pin="2"/>
+<wire x1="-15.24" y1="48.26" x2="-27.94" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A" class="0">
@@ -7636,7 +7716,7 @@ jason.k.holden@gmail.com</text>
 <label x="-10.16" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="COM"/>
+<pinref part="U1" gate="G$1" pin="COM"/>
 <wire x1="55.88" y1="68.58" x2="99.06" y2="68.58" width="0.1524" layer="91"/>
 <label x="91.44" y="68.58" size="1.778" layer="95"/>
 <wire x1="99.06" y1="68.58" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
@@ -7650,35 +7730,22 @@ jason.k.holden@gmail.com</text>
 <label x="-10.16" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GPIO16" class="0">
-<segment>
-<pinref part="JPL" gate="G$1" pin="4"/>
-<label x="-10.16" y="38.1" size="1.778" layer="95"/>
-<wire x1="0" y1="38.1" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="-53.34" y1="38.1" x2="-53.34" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="GPIO14" class="0">
-<segment>
-<pinref part="JPL" gate="G$1" pin="5"/>
-<label x="-10.16" y="35.56" size="1.778" layer="95"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="0" y1="35.56" x2="-40.64" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GPIO12" class="0">
 <segment>
 <pinref part="JPL" gate="G$1" pin="6"/>
-<wire x1="0" y1="33.02" x2="-10.16" y2="33.02" width="0.1524" layer="91"/>
 <label x="-10.16" y="33.02" size="1.778" layer="95"/>
+<wire x1="0" y1="33.02" x2="-53.34" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="-53.34" y1="33.02" x2="-53.34" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO13" class="0">
 <segment>
 <pinref part="JPL" gate="G$1" pin="7"/>
-<wire x1="0" y1="30.48" x2="-10.16" y2="30.48" width="0.1524" layer="91"/>
 <label x="-10.16" y="30.48" size="1.778" layer="95"/>
+<wire x1="0" y1="30.48" x2="-40.64" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="30.48" x2="-40.64" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="VPLUS" class="0">
@@ -7735,7 +7802,7 @@ jason.k.holden@gmail.com</text>
 <label x="68.58" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="S0"/>
+<pinref part="U1" gate="G$1" pin="S0"/>
 <wire x1="55.88" y1="81.28" x2="66.04" y2="81.28" width="0.1524" layer="91"/>
 <label x="58.42" y="81.28" size="1.778" layer="95"/>
 </segment>
@@ -7747,7 +7814,7 @@ jason.k.holden@gmail.com</text>
 <label x="68.58" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="S1"/>
+<pinref part="U1" gate="G$1" pin="S1"/>
 <wire x1="55.88" y1="78.74" x2="66.04" y2="78.74" width="0.1524" layer="91"/>
 <label x="58.42" y="78.74" size="1.778" layer="95"/>
 </segment>
@@ -7779,7 +7846,7 @@ jason.k.holden@gmail.com</text>
 <wire x1="0" y1="22.86" x2="-15.24" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="55.88" y1="58.42" x2="60.96" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="60.96" y1="58.42" x2="60.96" y2="50.8" width="0.1524" layer="91"/>
@@ -7826,13 +7893,13 @@ jason.k.holden@gmail.com</text>
 </segment>
 <segment>
 <pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="-53.34" y1="12.7" x2="-53.34" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="5.08" x2="-53.34" y2="0" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="-53.34" y1="7.62" x2="-48.26" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="7.62" x2="-40.64" y2="7.62" width="0.1524" layer="91"/>
-<junction x="-48.26" y="7.62"/>
+<wire x1="-53.34" y1="0" x2="-48.26" y2="0" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="0" x2="-40.64" y2="0" width="0.1524" layer="91"/>
+<junction x="-48.26" y="0"/>
 <pinref part="D2" gate="G$1" pin="C"/>
-<wire x1="-40.64" y1="7.62" x2="-40.64" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="0" x2="-40.64" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -7868,7 +7935,7 @@ jason.k.holden@gmail.com</text>
 <pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
+<pinref part="U1" gate="G$1" pin="VCC"/>
 <wire x1="55.88" y1="96.52" x2="60.96" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="3.3V"/>
 <wire x1="60.96" y1="96.52" x2="60.96" y2="101.6" width="0.1524" layer="91"/>
@@ -7891,7 +7958,7 @@ jason.k.holden@gmail.com</text>
 </net>
 <net name="EN_MUX" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="EN"/>
+<pinref part="U1" gate="G$1" pin="EN"/>
 <wire x1="55.88" y1="86.36" x2="66.04" y2="86.36" width="0.1524" layer="91"/>
 <label x="76.2" y="86.36" size="1.778" layer="95"/>
 <pinref part="R5" gate="G$1" pin="1"/>
@@ -7907,7 +7974,7 @@ jason.k.holden@gmail.com</text>
 <net name="N$2" class="0">
 <segment>
 <pinref part="JP1" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="G$1" pin="CHAN0"/>
+<pinref part="U1" gate="G$1" pin="CHAN0"/>
 <wire x1="-2.54" y1="96.52" x2="25.4" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -7916,7 +7983,7 @@ jason.k.holden@gmail.com</text>
 <pinref part="JP2" gate="G$1" pin="2"/>
 <wire x1="-2.54" y1="83.82" x2="5.08" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="83.82" x2="5.08" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="CHAN1"/>
+<pinref part="U1" gate="G$1" pin="CHAN1"/>
 <wire x1="5.08" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -7925,7 +7992,7 @@ jason.k.holden@gmail.com</text>
 <pinref part="JP3" gate="G$1" pin="2"/>
 <wire x1="-2.54" y1="71.12" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="71.12" x2="7.62" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="CHAN2"/>
+<pinref part="U1" gate="G$1" pin="CHAN2"/>
 <wire x1="7.62" y1="91.44" x2="25.4" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -7934,13 +8001,13 @@ jason.k.holden@gmail.com</text>
 <pinref part="JP4" gate="G$1" pin="2"/>
 <wire x1="-2.54" y1="58.42" x2="10.16" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="58.42" x2="10.16" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="CHAN3"/>
+<pinref part="U1" gate="G$1" pin="CHAN3"/>
 <wire x1="10.16" y1="88.9" x2="25.4" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="S3"/>
+<pinref part="U1" gate="G$1" pin="S3"/>
 <wire x1="55.88" y1="73.66" x2="66.04" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="73.66" x2="66.04" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -7948,7 +8015,7 @@ jason.k.holden@gmail.com</text>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="S2"/>
+<pinref part="U1" gate="G$1" pin="S2"/>
 <wire x1="55.88" y1="76.2" x2="73.66" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="76.2" x2="73.66" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -7958,14 +8025,29 @@ jason.k.holden@gmail.com</text>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="-53.34" y1="25.4" x2="-53.34" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="17.78" x2="-53.34" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="D2" gate="G$1" pin="A"/>
-<wire x1="-40.64" y1="25.4" x2="-40.64" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="17.78" x2="-40.64" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GPIO14" class="0">
+<segment>
+<pinref part="JPL" gate="G$1" pin="5"/>
+<wire x1="-10.16" y1="35.56" x2="0" y2="35.56" width="0.1524" layer="91"/>
+<label x="-10.16" y="35.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO16" class="0">
+<segment>
+<pinref part="JPL" gate="G$1" pin="4"/>
+<label x="-10.16" y="38.1" size="1.778" layer="95"/>
+<pinref part="DS" gate="G$1" pin="1"/>
+<wire x1="0" y1="38.1" x2="-27.94" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
