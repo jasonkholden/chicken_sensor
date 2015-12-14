@@ -7705,7 +7705,7 @@ at 30/07/2012 17:45:58</description>
 <text x="81.28" y="-27.94" size="2.286" layer="94" font="vector" ratio="12">Jason Holden
 jason.k.holden@gmail.com</text>
 <text x="-33.02" y="35.56" size="1.778" layer="94" rot="R90">Enable Deep Sleep</text>
-<text x="152.4" y="-27.94" size="2.286" layer="94" font="vector" ratio="12">0.2</text>
+<text x="152.4" y="-27.94" size="2.286" layer="94" font="vector" ratio="12">0.3</text>
 </plain>
 <instances>
 <instance part="JPB" gate="G$1" x="5.08" y="10.16" rot="R180"/>
